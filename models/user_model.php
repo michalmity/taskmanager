@@ -56,14 +56,14 @@ class user_model {
 
             $stmt->bind_param('s', $email);
             $stmt->execute();
-            $stmt->bind_result($id, $jmeno,$hashed_password, $role_id);
+            $stmt->bind_result($id, $username,$hashed_password, $role_id);
 
             if ($stmt->fetch()) {
                 if (password_verify($password_in, $hashed_password)) {
                     // Přihlášení úspěšné
                     session_start();
                     $_SESSION['user_id'] = $id;
-                    $_SESSION['user_name'] = $jmeno;
+                    $_SESSION['username'] = $username;
                     $_SESSION['user_role'] = $role_id;
                     header("Location: /index.php");
                     exit();
