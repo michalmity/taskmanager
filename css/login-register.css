@@ -1,0 +1,97 @@
+.container {
+    background: var(--background);
+    border-radius: 10px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    overflow: hidden;
+    width: 384px;
+    transition: height 0.5s ease-in-out;
+}
+
+.form-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.form {
+    min-width: 384px;
+    padding: 20px;
+    color: var(--text);
+    background-color: var(--background);
+    box-sizing: border-box;
+    transition: opacity 0.5s ease-in-out;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+
+.input-group-two {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-half {
+    width: 100%;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 0 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.form p {
+    position: relative;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 15px 0 0 0;
+}
+
+.form a {
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form form {
+    width: 100%;
+}
+
+h1, h2, h3 {
+    color: var(--text);
+}
+
+.button-submit {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: var(--background);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
