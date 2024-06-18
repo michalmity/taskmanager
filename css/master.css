@@ -1,4 +1,6 @@
 @import "login-register.css";
+@import "to-do-list.css";
+@import "navbar.css";
 
 
 
@@ -17,7 +19,7 @@
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: var(--text);
     background-color: var(--background);
@@ -27,5 +29,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
+
 }
