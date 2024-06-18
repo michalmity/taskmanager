@@ -7,7 +7,7 @@ create table users (
     user_id int primary key auto_increment,
     username varchar(255) not null,
     password varchar(255) not null,
-    email varchar(255) not null,
+    email varchar(255) not null unique ,
     role_id int not null
 );
 
