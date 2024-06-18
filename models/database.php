@@ -4,7 +4,7 @@ namespace models;
 class database {
     private $servername = "localhost"; // Adresa serveru MySQL
     private $username = "root"; // Uživatelské jméno MySQL
-    private $password = ""; // Heslo MySQL
+    private $password = "root"; // Heslo MySQL
     private $database = "taskmanager"; // Název databáze
     protected $conn;
 
