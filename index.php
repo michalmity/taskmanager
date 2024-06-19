@@ -16,6 +16,7 @@
     <div class="list-container">
         <div class="list to-do-list">
             <h3>Todo</h3>
+            <div class="item-container">
             <div class="list-item">
                 <div class="list-item-content">
                     <p class="task-description">Task 1 description</p>
@@ -25,82 +26,25 @@
                     <i class="bi bi-trash"></i>
                 </div>
             </div>
-            <div class="list-item">
-                <div class="list-item-content">
-                    <p>Dodělat si mat.analýzu + příkaldy na zítra + asi se zabiku idk proc</p>
-                </div>
-                <div class="list-item-actions">
-                    <i class="bi bi-pencil"></i>
-                    <i class="bi bi-trash"></i>
-                </div>
-            </div>
-            <div class="list-item">
-                <div class="list-item-content">
-                    <p>Lorem ipsum (zkráceně lipsum) je označení pro standardní pseudolatinský text užívaný v grafickém
-                        designu a navrhování jako demonstrativní výplňový text při vytváření pracovních ukázek
-                        grafických návrhů (např. internetových stránek, rozvržení časopisů či všech druhů reklamních
-                        materiálů). Lipsum tak pracovně znázorňuje text v ukázkových maketách (tzv. mock-up) předtím,
-                        než bude do hotového návrhu vložen ss</p>
-                </div>
-                <div class="list-item-actions">
-                    <i class="bi bi-pencil"></i>
-                    <i class="bi bi-trash"></i>
-                </div>
             </div>
         </div>
         <div class="list working-on-list">
             <h3>Working on</h3>
-            <div class="list-item">
-                <div class="list-item-content">
-                    <p class="task-description">Task 1 description</p>
-                </div>
-                <div class="list-item-actions">
-                    <i class="bi bi-pencil"></i>
-                    <i class="bi bi-trash"></i>
-                </div>
-            </div>
-            <div class="list-item">
-                <div class="list-item-content">
-                    <p>Dodělat si mat.analýzu + příkaldy na zítra + asi se zabiku idk proc</p>
-                </div>
-                <div class="list-item-actions">
-                    <i class="bi bi-pencil"></i>
-                    <i class="bi bi-trash"></i>
-                </div>
-            </div>
-            <div class="list-item">
-                <div class="list-item-content">
-                    <p>Lorem ipsum (zkráceně lipsum) je označení pro standardní pseudolatinský text užívaný v grafickém
-                        designu a navrhování jako demonstrativní výplňový text při vytváření pracovních ukázek
-                        grafických návrhů (např. internetových stránek, rozvržení časopisů či všech druhů reklamních
-                        materiálů). Lipsum tak pracovně znázorňuje text v ukázkových maketách (tzv. mock-up) předtím,
-                        než bude do hotového návrhu vložen ss</p>
-                </div>
-                <div class="list-item-actions">
-                    <i class="bi bi-pencil"></i>
-                    <i class="bi bi-trash"></i>
+            <div class="item-container">
+                <div class="list-item">
+                    <div class="list-item-content">
+                        <p class="task-description">Task 1 description</p>
+                    </div>
+                    <div class="list-item-actions">
+                        <i class="bi bi-pencil"></i>
+                        <i class="bi bi-trash"></i>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="list done-list">
             <h3>Done</h3>
-            <div class="list-item">
-                <div class="list-item-content">
-                    <p class="task-description">Task 1 description</p>
-                </div>
-                <div class="list-item-actions-secondary">
-                    <i class="bi bi-pencil"></i>
-                    <i class="bi bi-trash"></i>
-                </div>
-            </div>
-            <div class="list-item">
-                <div class="list-item-content">
-                    <p>Dodělat si mat.analýzu + příkaldy na zítra + asi se zabiku idk proc</p>
-                </div>
-                <div class="list-item-actions-secondary">
-                    <i class="bi bi-pencil"></i>
-                    <i class="bi bi-trash"></i>
-                </div>
+            <div class="item-container">
             </div>
         </div>
     </div>
