@@ -18,11 +18,10 @@ create table roles (
 
 create table tasks (
     task_id int primary key auto_increment,
-    title varchar(255) not null,
     description text not null,
     created_at datetime not null,
     updated_at datetime not null,
-    end_at datetime not null,
+    end_at date not null,
     status_id int not null,
     user_id int not null
 );
@@ -38,4 +37,8 @@ alter table tasks add constraint fk_tasks_users foreign key (user_id) references
 
 insert into roles (name) values ('admin');
 insert into roles (name) values ('user');
+
+insert into statuses (name) values ('todo');
+insert into statuses (name) values ('in progress');
+insert into statuses (name) values ('done');
 
