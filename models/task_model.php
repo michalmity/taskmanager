@@ -108,4 +108,27 @@ class task
             header("Location: /index.php");
         }
     }
+
+    public function delete_task()
+    {
+        session_start();
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $task_id = $_POST['task_id'];
+
+            $conn = $this->db->db_connect();
+            if ($conn === false) {
+                die("CHYBA: Nepodařilo se připojit. " . $conn->connect_error);
+            }
+            $sql = "DELETE from tasks where task_id = ?";
+            $stmt = $conn->prepare($sql);
+            if ($stmt === false) {
+                die("CHYBA: Nepodařilo se připravit dotaz. " . $conn->error);
+            }
+            $stmt->bind_param('i', $task_id);
+            $stmt->execute();
+            $stmt->close();
+            header("Location: /index.php");
+        }
+    }
 }
