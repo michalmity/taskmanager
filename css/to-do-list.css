@@ -122,25 +122,34 @@
     background-color: var(--primary);
     font-size: 12px;
     border-radius: 5px;
-    padding: 5px;
+    padding: 5px 0;
     color: var(--background);
     position: absolute;
     right: -10px;
     top: -10px;
-    gap: 10px;
+    max-height: 24px;
+    box-sizing: border-box;
 }
 
-.list-item-actions-secondary {
+.list-item-actions form{
     display: flex;
-    background-color: var(--primary);
-    font-size: 12px;
-    border-radius: 5px;
-    padding: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+.list-item-actions button {
+    border: none;
+    background-color: transparent;
     color: var(--background);
-    position: absolute;
-    right: -10px;
-    bottom: -10px;
-    gap: 10px;
+    cursor: pointer;
+
+}
+
+.list-item-actions button i {
+    font-size: 12px;
+
 }
 
 .add-task {
@@ -175,7 +184,7 @@
     user-select: none;
 }
 
-.add-task select{
+.add-task select {
     border: 1px solid var(--primary);
     width: 100%;
     border-radius: 5px;
@@ -184,11 +193,11 @@
     user-select: none;
 }
 
-.add-task select:focus{
+.add-task select:focus {
     outline: none;
 }
 
-.add-task select option{
+.add-task select option {
     color: var(--text);
 }
 
