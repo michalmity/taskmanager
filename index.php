@@ -27,10 +27,10 @@
                         <i class='task-due'>{$task['due_to']}</i>
                     </div>
                     <div class='list-item-actions'>
-                        <form action='controllers/task_controller.php' method='post'>
-                            <input type='hidden' name='action' value='update_task'>
+                        <form method='get'>
+                            <input type='hidden' name='action' value='edit_task'>
                             <input type='hidden' name='task_id' value='{$task['id']}'>
-                            <button type='submit'><i class='bi bi-pencil'></i></button>
+                            <button type='submit' id='show-modal'><i class='bi bi-pencil'></i></button>
                         </form>
                         <form action='controllers/task_controller.php' method='post'>
                             <input type='hidden' name='action' value='delete_task'>
@@ -55,8 +55,8 @@
                         <i class='task-due'>{$task['due_to']}</i>
                     </div>
                     <div class='list-item-actions'>
-                        <form action='controllers/task_controller.php' method='post'>
-                            <input type='hidden' name='action' value='update_task'>
+                        <form method='get'>
+                            <input type='hidden' name='action' value='edit_task'>
                             <input type='hidden' name='task_id' value='{$task['id']}'>
                             <button type='submit'><i class='bi bi-pencil'></i></button>
                         </form>
@@ -83,8 +83,8 @@
                         <i class='task-due'>{$task['due_to']}</i>
                     </div>
                     <div class='list-item-actions'>
-                        <form action='controllers/task_controller.php' method='post'>
-                            <input type='hidden' name='action' value='update_task'>
+                        <form method='get'>
+                            <input type='hidden' name='action' value='edit_task'>
                             <input type='hidden' name='task_id' value='{$task['id']}'>
                             <button type='submit'><i class='bi bi-pencil'></i></button>
                         </form>
@@ -122,6 +122,49 @@
             <button type="submit" class="button-submit">Add</button>
         </form>
     </div>
+    <div class="modal-container" id='modal'>
+        <div class="modal">
+            <?php
+            require_once "controllers/task_controller.php";
+            $controller = new controllers\task_controller();
+            $task = null;
+            if (isset($_GET['task_id']) && $_GET['action'] === 'edit_task') {
+                $task = $controller->get_task_by_id($_GET['task_id']);
+            }
+            ?>
+            <?php if ($task === null): ?>
+                <div class="modal-content">
+                    <span class="close" id="modal-close">&times;</span>
+                    <p>No task selected</p>
+                </div>
+            <?php else: ?>
+            <script>  document.getElementById('modal').style.display = 'block'; </script>
+                <div class="modal-content">
+                    <span class="close" id="modal-close">&times;</span>
+                    <h2>Edit</h2>
+                    <form action="controllers/task_controller.php" method="post">
+                        <input type="hidden" name="action" value="update_task">
+                        <input type="hidden" name="task_id" value="<?php echo $task['id'] ?>">
+                        <label for="text">Edit task:</label>
+                        <input type="text" name="description" value="<?php echo $task['description'] ?>">
+                        <label for="date">Due:</label>
+                        <input type="date" name="due_to" value="<?php echo $task['due_to'] ?>">
+                        <label for="status">Pick your progress</label>
+                        <select name="status">
+                            <?php
+                            $statuses = $controller->get_statuses();
+                            foreach ($statuses as $status) {
+                                $selected = ($task['status_id'] == $status['id']) ? 'selected' : '';
+                                echo "<option value='{$status['id']}' $selected>{$status['name']}</option>";
+                            }
+                            ?>
+                        </select>
+                        <button type="submit" class="button-submit">Update</button>
+                    </form>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
 <?php else: ?>
     <div class="container" id="container">
         <div class="form-container" id="form-container">
@@ -158,3 +201,4 @@
 </html>
 
 <script type="text/javascript" src="js/login-register.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>

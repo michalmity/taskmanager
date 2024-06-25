@@ -26,6 +26,14 @@ class task_controller {
     public function delete_task(){
         return $this->task_model->delete_task();
     }
+
+    public function get_task_by_id($task_id)
+    {
+        return $this->task_model->get_task_by_id($task_id);
+    }
+    public function update_task(){
+        return $this->task_model->update_task();
+    }
 }
 
 
@@ -38,6 +46,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     elseif ($action === 'delete_task') {
         $controller->delete_task();
+    }
+    elseif ($action === 'update_task') {
+        $controller->update_task();
     }
     else {
         die('Invalid action');
