@@ -9,7 +9,7 @@
                 <p><?php echo $_SESSION["username"]; ?></p>
                 <form action="../controllers/user_controller.php" method="post">
                     <input type="hidden" name="action" value="logout">
-                    <button type="submit"><i class=" bi bi-box-arrow-right"></i></button>
+                    <button type="submit" class="navbar-btn"><i class="bi bi-person-dash"></i></button>
                 </form>
             </div>
         <?php endif; ?>
