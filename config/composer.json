@@ -1,2 +1,5 @@
 {
+  "require": {
+    "components/jquery": ">=v3.7.1"
+  }
 }

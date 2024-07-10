@@ -95,3 +95,15 @@ h1, h2, h3 {
     font-weight: 600;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        box-shadow: none;
+
+    }
+    .form {
+        min-width: 100%;
+        padding: 20px 10px;
+    }
+}

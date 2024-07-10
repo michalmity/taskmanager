@@ -1,5 +1,4 @@
 
-
 function hideModal() {
     document.getElementById('modal').style.display = 'none';
 }
@@ -16,3 +15,4 @@ window.onclick = function(event) {
         hideModal();
     }
 }
+

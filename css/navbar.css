@@ -66,4 +66,32 @@
     font-size: 1rem;
 }
 
+.navbar-right
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
+.navbar-addtask
+{
+    background: var(--linearPrimaryAccent);
+    height: 2rem;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--background);
+
+}
+
+.navbar-addtask i
+{
+    font-size: 1rem;
+    font-weight: bold;
+
+}
