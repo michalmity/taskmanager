@@ -4,7 +4,7 @@
     </div>
     <div class="navbar-right">
         <?php if (isset($_SESSION["user_id"])): ?>
-            <div class="navbar-addtask" id="addtask">
+            <div class="navbar-addtask" id="nav-add">
                 <p>Add task</p>
             </div>
             <div class="navbar-profile">
