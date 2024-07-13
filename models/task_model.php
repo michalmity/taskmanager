@@ -160,7 +160,7 @@ class task
     }
 
 
-public function update_task()
+public function edit_task()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $task_id = $_POST['task_id'];
