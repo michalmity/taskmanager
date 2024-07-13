@@ -198,7 +198,9 @@
         </div>
     </div>
 <?php endif; ?>
-
+<div class="addtask-mobile add-task-btn" >
+    <i class="bi bi-plus"></i>
+</div>
 </body>
 </html>
 
