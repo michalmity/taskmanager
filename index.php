@@ -165,7 +165,9 @@
             <?php endif; ?>
         </div>
     </div>
-
+    <div class="addtask-mobile add-task-btn" >
+        <i class="bi bi-plus"></i>
+    </div>
 <?php else: ?>
     <div class="container" id="container">
         <div class="form-container" id="form-container">
@@ -198,9 +200,6 @@
         </div>
     </div>
 <?php endif; ?>
-<div class="addtask-mobile add-task-btn" >
-    <i class="bi bi-plus"></i>
-</div>
 </body>
 </html>
 
